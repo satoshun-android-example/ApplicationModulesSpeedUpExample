@@ -49,6 +49,8 @@ android {
 }
 
 dependencies {
+  implementation project(':feature1')
+
   implementation KOTLIN
   implementation APPCOMPAT
   implementation CONSTRAINTLAYOUT

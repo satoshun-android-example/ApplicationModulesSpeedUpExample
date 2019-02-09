@@ -3,6 +3,7 @@ import static dependencies.DependenciesKt.*
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 android {
   compileSdkVersion COMPILE_SDK
@@ -15,4 +16,11 @@ android {
 
 dependencies {
   implementation KOTLIN
+
+  implementation ACTIVITYX
+  implementation FRAGMENTX
+}
+
+androidExtensions {
+  experimental = true
 }

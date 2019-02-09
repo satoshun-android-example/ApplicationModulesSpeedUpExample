@@ -53,5 +53,10 @@
       android:text="move"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
