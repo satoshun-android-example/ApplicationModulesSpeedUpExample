@@ -10,8 +10,6 @@ class SubActivity : BaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-    (application as App).appComponent.inject(this)
-
     thread {
       Thread.sleep(3000)
       actionCreator.updateAuthor(name = "hoge", age = 10)

@@ -1,15 +1,22 @@
 package com.github.satoshun.example.sample
 
 import android.content.Context
+import com.github.satoshun.example.feature1.AdapterModule
 import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjector
+import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
 @Component(
-  modules = [DatabaseModule::class]
+  modules = [
+    AndroidSupportInjectionModule::class,
+    DatabaseModule::class,
+    AdapterModule::class
+  ]
 )
-interface AppComponent {
+interface AppComponent : AndroidInjector<App> {
   @Component.Builder
   interface Builder {
     @BindsInstance
@@ -17,8 +24,4 @@ interface AppComponent {
 
     fun build(): AppComponent
   }
-
-  fun inject(activity: MainActivity)
-  fun inject(activity: SubActivity)
 }
-

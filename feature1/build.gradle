@@ -19,6 +19,12 @@ dependencies {
 
   implementation ACTIVITYX
   implementation FRAGMENTX
+
+  implementation DAGGER
+  kapt DAGGER_PROCESSOR
+  implementation DAGGER_ANDROID
+  kapt DAGGER_ANDROID_PROCESSOR
+  implementation DAGGER_ANDROID_SUPPORT
 }
 
 androidExtensions {

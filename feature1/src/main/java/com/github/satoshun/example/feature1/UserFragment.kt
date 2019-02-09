@@ -1,11 +1,13 @@
 package com.github.satoshun.example.feature1
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import dagger.android.support.AndroidSupportInjection
 
 class UserFragment : Fragment() {
   companion object {
@@ -13,6 +15,11 @@ class UserFragment : Fragment() {
       UserFragment().apply {
         arguments = Bundle().apply { putParcelable("key", UserParams(userName, age)) }
       }
+  }
+
+  override fun onAttach(context: Context) {
+    AndroidSupportInjection.inject(this)
+    super.onAttach(context)
   }
 
   override fun onCreateView(

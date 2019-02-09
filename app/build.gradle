@@ -49,6 +49,7 @@ android {
 }
 
 dependencies {
+  compileOnly project(':feature1')
   implementation project(':app-feature-adapter')
 
   implementation KOTLIN
@@ -64,6 +65,9 @@ dependencies {
 
   implementation DAGGER
   kapt DAGGER_PROCESSOR
+  implementation DAGGER_ANDROID
+  kapt DAGGER_ANDROID_PROCESSOR
+  implementation DAGGER_ANDROID_SUPPORT
 
   implementation FRAGMENTX
   implementation ACTIVITYX
