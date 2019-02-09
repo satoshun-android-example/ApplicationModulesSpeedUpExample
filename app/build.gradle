@@ -49,7 +49,7 @@ android {
 }
 
 dependencies {
-  implementation project(':feature1')
+  implementation project(':app-feature-adapter')
 
   implementation KOTLIN
   implementation APPCOMPAT
