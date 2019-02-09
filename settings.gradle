@@ -1,2 +1,3 @@
 include ':app'
+include ':app-feature-adapter'
 include ':feature1'
