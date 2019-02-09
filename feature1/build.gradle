@@ -1,0 +1,18 @@
+import static dependencies.DependenciesKt.*
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion COMPILE_SDK
+
+  defaultConfig {
+    minSdkVersion MIN_SDK
+    targetSdkVersion TARGET_SDK
+  }
+}
+
+dependencies {
+  implementation KOTLIN
+}
