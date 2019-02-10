@@ -49,7 +49,7 @@ android {
 }
 
 dependencies {
-  compileOnly project(':feature1')
+//  compileOnly project(':feature1')
   implementation project(':app-feature-adapter')
 
   implementation KOTLIN
