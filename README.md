@@ -1,1 +1,1 @@
-# Activity-Ktx + Dagger Example
+# intermediate module technique for incremental build performance
